@@ -131,7 +131,7 @@ if __name__ == "__main__":
         pass
 
     file_dir = os.path.dirname(__file__)
-    os.chdir(file_dir)
+    os.chdir(file_dir if file_dir != '' else '.')
 
     if not os.path.exists("ngrok"):
         get_ngrok()
