@@ -1,13 +1,17 @@
 
-# MtProto-ngrok
+# <p align="center"> MtProto-ngrok
+<p align="center"> تلگرام خود را عمومی کنید MtProto پروکسی های
+
+![](https://img.shields.io/github/issues/Oct4Pie/MtProto-ngrok) 
+![](https://img.shields.io/github/forks/Oct4Pie/MtProto-ngrok)
+![](https://img.shields.io/github/stars/Oct4Pie/MtProto-ngrok)
+![](https://img.shields.io/github/license/Oct4Pie/MtProto-ngrok)
+![](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FOct4Pie%2FMtProto-ngrok)
 
 
+> (MtProto) با استفاده از این پروژه شما میتوانید پروکسی های خود را بدون نیاز به هیچ  گونه وابستگی دیگر عمومی کنید    [mtprotoproxy](https://github.com/alexbers/mtprotoproxy) :خود پروژه از پروکسی به صورت پیش فرض استفاده میکند
 
-* (MtProto) با استفاده از این پروژه شما میتوانید پروکسی های خود را بدون نیاز به هیچ  گونه وابستگی دیگر عمومی کنید 
 
-*  [mtprotoproxy](https://github.com/alexbers/mtprotoproxy) :خود پروژه از پروکسی به صورت پیش فرض استفاده میکند
-
-  
 
 ## شروع
 
@@ -16,9 +20,7 @@
 * برای نصب برای روی دستگاه خود توسط گیت:
 
 ```
-
 git clone https://github.com/Oct4Pie/MtProto-ngrok.git
-
 ```
 
 ### پیش نیازها
@@ -32,18 +34,16 @@ git clone https://github.com/Oct4Pie/MtProto-ngrok.git
 * ماژول رمزنگاری پایتون از پای‌پای توسط ماژول پیپ قابل نصب است:
 
 ```
-
 pip3 install cryptography
-
 ```
 
   
 
 * را دانلود کرده و اجرا میکند ngrok `main.py` فایل
 
-  
+* به یک توکن احراز هویت احتیاج دارد ngrok
 
-* به یک توکن احراز هویت احتیاج دارد ngrok [اینجا](https://dashboard.ngrok.com/signup) ثبت نام کنید و سپس رمز خود را از [اینجا](https://dashboard.ngrok.com/auth/your-authtoken) دریافت کنید
+* [اینجا](https://dashboard.ngrok.com/signup) ثبت نام کنید و سپس رمز خود را از [اینجا](https://dashboard.ngrok.com/auth/your-authtoken) دریافت کنید
 
   
 
@@ -60,11 +60,9 @@ pip3 install cryptography
   
 
 ```
-
 cd MtProto-ngrok
 
 python3 main.py
-
 ```
 
   
@@ -76,11 +74,9 @@ python3 main.py
 #### مثال
 
 ```
-
 $ python3 main.py
 
 tg://proxy?server=0.tcp.ngrok.io&port=00000&secret=ee6232949ec23bd5d29764e949b9cff9e87777772e74656c656772616d2e6f7267
-
 ```
 
 
