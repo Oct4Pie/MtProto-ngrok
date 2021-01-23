@@ -1,12 +1,20 @@
-# MtProto-ngrok
-**[راهنما فارسی](FA_README.md)**
+# <p align="center">MtProto-ngrok
+#### <p align="center">  [راهنما فارسی](FA_README.md)
+  
+<p align="center"> Expose Your MtProto Proxy to the Internet
 
-You can use this project to expose your Telegram MtProto proxy and don't worry about portability and port forwarding. This project is using [mtprotoproxy](https://github.com/alexbers/mtprotoproxy), written in Python.
+![](https://img.shields.io/github/issues/Oct4Pie/MtProto-ngrok) 
+![](https://img.shields.io/github/forks/Oct4Pie/MtProto-ngrok)
+![](https://img.shields.io/github/stars/Oct4Pie/MtProto-ngrok)
+![](https://img.shields.io/github/license/Oct4Pie/MtProto-ngrok)
+![](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FOct4Pie%2FMtProto-ngrok)
+
+> You can use this project to expose your Telegram MtProto proxy and don't worry about portability and port forwarding. This project is using [mtprotoproxy](https://github.com/alexbers/mtprotoproxy), written in Python.
 
 
 ## Getting Started
 
-The code has been tested on Windows 10, macOS, and most Linux operating systems with Python3.5-3.9.
+The code has been tested on Windows 10, macOS, and most Linux operating systems with Python 3.5-3.9.
 * To get a copy via git: 
 ```
 git clone https://github.com/Oct4Pie/MtProto-ngrok.git
@@ -50,3 +58,4 @@ See [LICENSE](LICENSE) file for more details
 
 * [Async MTProto Proxy](https://github.com/alexbers/mtprotoproxy)
 * [ngrok](https://ngrok.io)
+
