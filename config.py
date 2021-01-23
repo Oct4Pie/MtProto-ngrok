@@ -13,6 +13,6 @@ MODES = {
     "tls": True,
 }
 
-TLS_DOMAIN = "www.telegram.org"
+TLS_DOMAIN = "www.ngrok.com"
 AUTHTOKEN = ""  # set to your ngrok's token
 # AD_TAG = ""
