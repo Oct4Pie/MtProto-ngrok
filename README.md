@@ -31,7 +31,7 @@ pip3 install cryptography
 * Ngrok requires an authentication token to route TCP traffic. You can sign up at [here](https://dashboard.ngrok.com/signup) and then obtain your token from [here](https://dashboard.ngrok.com/auth/your-authtoken).
 * Set `AUTHTOKEN` in `config.py` equal to your token.
 
-### Running
+## Running
 * To run the proxy server and ngrok tunnel use:
 ```
 cd MtProto-ngrok
@@ -44,6 +44,16 @@ $ python3 main.py
 tg://proxy?server=0.tcp.ngrok.io&port=00000&secret=ee6232949ec23bd5d29764e949b9cff9e87777772e74656c656772616d2e6f7267
 ```
 <img  src="./proxy_demo.gif"  width="350"  height="600">
+
+## Running on Repl.it
+* You can clone the repository via repl.it
+* Sign up at [https://repl.it/signup](https://repl.it/signup)
+* In the homepage, under "Create," click "+"
+* Enter the repository's address: [https://github.com/Oct4Pie/MtProto-ngrok.git](https://github.com/Oct4Pie/MtProto-ngrok.git)
+
+<img  src="./replit_demo.png"  width="600"  height="350">
+<img  src="./replit_demo1.png"  width="600"  height="400">
+
 
 ## Advertising Channles
 
@@ -58,4 +68,5 @@ See [LICENSE](LICENSE) file for more details
 
 * [Async MTProto Proxy](https://github.com/alexbers/mtprotoproxy)
 * [ngrok](https://ngrok.io)
+
 

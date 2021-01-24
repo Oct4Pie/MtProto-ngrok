@@ -70,6 +70,14 @@ python3 main.py
 * آدرس خروجی را می توان در برنامه تلگرام یا مرورگر جای گذاری کرد
 
   
+## repl.it اجرا روی
+* دانلود کنید repl.it می توانید مخزن را از طریق
+* ثبت نام کنید [https://repl.it/signup ](https://repl.it/signup) در
+* روی "+" کلیک کنید "Create" در صفحه اصلی ، در بخش
+* آدرس مخزن را وارد کنید: [https://github.com/Oct4Pie/MtProto-ngrok.git]
+
+<img  src="./replit_demo.png"  width="600"  height="350">
+<img  src="./replit_demo1.png"  width="600"  height="400">
 
 #### مثال
 
