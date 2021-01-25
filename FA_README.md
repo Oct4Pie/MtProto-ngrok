@@ -79,6 +79,11 @@ python3 main.py
 <img  src="./replit_demo.png"  width="600"  height="350">
 <img  src="./replit_demo1.png"  width="600"  height="400">
 
+* پایتون را به عنوان زبان انتخاب کنید
+* را ست کنید `run="python3 main.py"`
+* کد را اجرا کنید "Run" از طریق 
+* `python3 main.py` shell یا از طریق 
+
 #### مثال
 
 ```
@@ -90,7 +95,6 @@ tg://proxy?server=0.tcp.ngrok.io&port=00000&secret=ee6232949ec23bd5d29764e949b9c
 
 <img  src="./proxy_demo.gif"  width="350"  height="600">
 
-  
 
 ## تبلیغ کانال
 
@@ -98,6 +102,8 @@ tg://proxy?server=0.tcp.ngrok.io&port=00000&secret=ee6232949ec23bd5d29764e949b9c
 
 * را برابر با تگ خود تنظیم کنید `config.py` داخل `AD_TAG` سپس
 
+## گروه پشتیبانی تلگرام
+* [https://t.me/MtProtoNgrokSupport](https://t.me/MtProtoNgrokSupport] به ما بپیوندید
 
 
 ## مجوز

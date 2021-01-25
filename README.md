@@ -54,11 +54,19 @@ tg://proxy?server=0.tcp.ngrok.io&port=00000&secret=ee6232949ec23bd5d29764e949b9c
 <img  src="./replit_demo.png"  width="600"  height="350">
 <img  src="./replit_demo1.png"  width="600"  height="400">
 
+* Choose Python as the language
+* Set `run="python3 main.py"`
+* Run the replit via "Run" or using shell: `python3 main.py`
+
 
 ## Advertising Channles
 
 * Refer to the [@MTProxybot](https://t.me/MTProxybot) Telegram bot to obtain a tag
 * Set `AD_TAG` in `config.py` equal to your tag
+
+## Telegram Support Group
+* Join us at [https://t.me/MtProtoNgrokSupport](https://t.me/MtProtoNgrokSupport)
+
 
 ## License
 This project is licensed under the MIT License
@@ -68,5 +76,6 @@ See [LICENSE](LICENSE) file for more details
 
 * [Async MTProto Proxy](https://github.com/alexbers/mtprotoproxy)
 * [ngrok](https://ngrok.io)
+
 
 
