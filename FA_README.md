@@ -103,7 +103,7 @@ tg://proxy?server=0.tcp.ngrok.io&port=00000&secret=ee6232949ec23bd5d29764e949b9c
 * را برابر با تگ خود تنظیم کنید `config.py` داخل `AD_TAG` سپس
 
 ## گروه پشتیبانی تلگرام
-* [https://t.me/MtProtoNgrokSupport](https://t.me/MtProtoNgrokSupport] به ما بپیوندید
+* [https://t.me/MtProtoNgrokSupport](https://t.me/MtProtoNgrokSupport) به ما بپیوندید
 
 
 ## مجوز
