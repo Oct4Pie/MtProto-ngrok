@@ -14,5 +14,4 @@ MODES = {
 }
 
 TLS_DOMAIN = "www.ngrok.com"
-AUTHTOKEN = ""  # set to your ngrok's token
-# AD_TAG = ""
+Token = ""  # set to your ngrok's token
