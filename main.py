@@ -10,7 +10,8 @@ import time
 import threading
 import subprocess
 import secrets
-from config import PORT, TLS_DOMAIN, AUTHTOKEN
+import random
+from config import PORT, TLS_DOMAIN, AUTHTOKEN, MODES
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
@@ -131,23 +132,47 @@ if __name__ == "__main__":
         pass
 
     file_dir = os.path.dirname(__file__)
-    os.chdir(file_dir if file_dir != '' else '.')
+    os.chdir(file_dir if file_dir != "" else ".")
 
     if not os.path.exists("ngrok"):
         get_ngrok()
 
     url, port = expose_server()
-    secret = secrets.token_hex(nbytes=16)
+    secret = secrets.token_hex(16)
+
+    if MODES["tls"]:
+        domain_hex = TLS_DOMAIN.encode().hex()
+        if len(domain_hex) >= 30:
+            raise Exception("TLS domain is too long: " + TLS_DOMAIN)
+
+        else:
+            secret = ""
+            for i in range(32):
+                secret += random.choice("abcdef0123456789")
+
     open("secret", "w").write(secret)
-    tls_secret = "ee" + secret + TLS_DOMAIN.encode().hex()
-    params = {"server": url, "port": port, "secret": tls_secret}
-    params_encodeded = urllib.parse.urlencode(params, safe=":")
-    tls_link = "tg://proxy?{}".format(params_encodeded)
-    print(tls_link)
+    tls_secret = "ee" + secret + domain_hex
+    tls_params = {"server": url, "port": port, "secret": tls_secret}
+    tls_params_encodeded = urllib.parse.urlencode(tls_params, safe=":")
+    tls_link = "tg://proxy?{}".format(tls_params_encodeded)
+    print("TLS: ")
+    print("in-app:", tls_link)
+    print("external:", "https://t.me/proxy?{}".format(tls_params_encodeded), "\n")
+
+    sec_params = {"server": url, "port": port, "secret": "dd" + secret}
+    sec_params_encodeded = urllib.parse.urlencode(sec_params, safe=":")
+    sec_link = "tg://proxy?{}".format(sec_params_encodeded)
+    print("Secure: ")
+    print("in-app:", sec_link)
+    print("external:", "https://t.me/proxy?{}".format(sec_params_encodeded), "\n")
+
+    print(f"host:port -> {url}:{port}\nsecret -> {secret}")
 
     if os.getenv("REPL_ID") or os.getenv("RUN_HTTP"):
         stay_alive()
 
     os.system(
         f"{sys.executable} mtprotoproxy.py > /dev/null 2>&1"
-    ) if uname.system != "Windows" else subprocess.run(f"\"{python_exec}\" \"{file_dir+'/'+'mtprotoproxy.py'}\" > nul 2>&1", shell=True)
+    ) if uname.system != "Windows" else subprocess.run(
+        f"\"{python_exec}\" \"{file_dir+'/'+'mtprotoproxy.py'}\" > nul 2>&1", shell=True
+    )
