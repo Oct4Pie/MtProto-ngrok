@@ -1,4 +1,5 @@
 import os
+import random
 
 os.chdir(os.path.dirname(__file__))
 
@@ -9,10 +10,15 @@ USERS = {
 
 MODES = {
     "classic": False,
-    "secure": False,
+    "secure": True,
     "tls": True,
 }
 
-TLS_DOMAIN = "www.ngrok.com"
+TLS_DOMAIN = random.choice(
+    [
+        "www.ngrok.com",
+
+    ]
+)
 AUTHTOKEN = ""  # set to your ngrok's token
-# AD_TAG = ""
+# AD_TAG = "" # set to your ad tag
