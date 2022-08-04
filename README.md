@@ -41,7 +41,16 @@ python3 main.py
 #### Example
 ```
 $ python3 main.py
-tg://proxy?server=0.tcp.ngrok.io&port=00000&secret=ee6232949ec23bd5d29764e949b9cff9e87777772e74656c656772616d2e6f7267
+TLS: 
+in-app: tg://proxy?server=6.tcp.ngrok.io&port=19977&secret=eed22691fe775a6bfefd0bd56c63afd8257777772e6e67726f6b2e636f6d
+external: https://t.me/proxy?server=6.tcp.ngrok.io&port=19977&secret=eed22691fe775a6bfefd0bd56c63afd8257777772e6e67726f6b2e636f6d 
+
+Secure: 
+in-app: tg://proxy?server=6.tcp.ngrok.io&port=19977&secret=ddd22691fe775a6bfefd0bd56c63afd825
+external: https://t.me/proxy?server=6.tcp.ngrok.io&port=19977&secret=ddd22691fe775a6bfefd0bd56c63afd825 
+
+host:port -> 6.tcp.ngrok.io:19977
+secret -> d22691fe775a6bfefd0bd56c63afd825
 ```
 <img  src="./proxy_demo.gif"  width="350"  height="600">
 
@@ -65,7 +74,7 @@ tg://proxy?server=0.tcp.ngrok.io&port=00000&secret=ee6232949ec23bd5d29764e949b9c
 * Set `AD_TAG` in `config.py` equal to your tag
 
 ## Telegram Support Group
-* Join us at [https://t.me/MtProtoNgrokSupport](https://t.me/MtProtoNgrokSupport)
+* Join us at [https://t.me/MtProto_ngrok](https://t.me/MtProto_ngrok)
 
 
 ## License
