@@ -92,9 +92,9 @@ CBC_PADDING = 16
 PADDING_FILLER = b"\x04\x00\x00\x00"
 
 MIN_MSG_LEN = 12
-MAX_MSG_LEN = 2 ** 24
+MAX_MSG_LEN = 2**24
 
-STAT_DURATION_BUCKETS = [0.1, 0.5, 1, 2, 5, 15, 60, 300, 600, 1800, 2 ** 31 - 1]
+STAT_DURATION_BUCKETS = [0.1, 0.5, 1, 2, 5, 15, 60, 300, 600, 1800, 2**31 - 1]
 
 my_ip_info = {"ipv4": None, "ipv6": None}
 used_handshakes = collections.OrderedDict()
@@ -493,7 +493,7 @@ class MyRandom(random.Random):
     def __init__(self):
         super().__init__()
         key = bytes([random.randrange(256) for i in range(32)])
-        iv = random.randrange(256 ** 16)
+        iv = random.randrange(256**16)
 
         self.encryptor = create_aes_ctr(key, iv)
         self.buffer = bytearray()
@@ -830,7 +830,7 @@ class MTProtoCompactFrameStreamWriter(LayeredStreamWriterBase):
 
     def write(self, data, extra={}):
         SMALL_PKT_BORDER = 0x7F
-        LARGE_PKT_BORGER = 256 ** 3
+        LARGE_PKT_BORGER = 256**3
 
         if len(data) % 4 != 0:
             print_err(
@@ -1049,7 +1049,7 @@ def set_instant_rst(sock):
 
 def gen_x25519_public_key():
     # generates some number which has square root by modulo P
-    P = 2 ** 255 - 19
+    P = 2**255 - 19
     n = myrandom.randrange(P)
     return int.to_bytes((n * n) % P, length=32, byteorder="little")
 
@@ -1543,7 +1543,7 @@ async def middleproxy_handshake(host, port, reader_tgt, writer_tgt):
 
     writer_tgt = MTProtoFrameStreamWriter(writer_tgt, START_SEQ_NO)
     key_selector = PROXY_SECRET[:4]
-    crypto_ts = int.to_bytes(int(time.time()) % (256 ** 4), 4, "little")
+    crypto_ts = int.to_bytes(int(time.time()) % (256**4), 4, "little")
 
     nonce = myrandom.getrandbytes(NONCE_LEN)
 
@@ -2357,7 +2357,11 @@ def print_tg_info():
                 print("{}: {}".format(user, classic_link), flush=True)
 
             if config.MODES["secure"]:
-                params = {"server": ip, "port": config.PORT, "secret": "dd" + secret + config.TLS_DOMAIN.encode().hex()}
+                params = {
+                    "server": ip,
+                    "port": config.PORT,
+                    "secret": "dd" + secret + config.TLS_DOMAIN.encode().hex(),
+                }
                 params_encodeded = urllib.parse.urlencode(params, safe=":")
                 dd_link = "tg://proxy?{}".format(params_encodeded)
                 proxy_links.append({"user": user, "link": dd_link})
