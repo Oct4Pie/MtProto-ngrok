@@ -77,7 +77,10 @@ external: https://t.me/proxy?server=6.tcp.ngrok.io&port=19977&secret=ddd22691fe7
 host:port -> 6.tcp.ngrok.io:19977
 secret -> d22691fe775a6bfefd0bd56c63afd825
 ```
-https://github.com/Oct4Pie/MtProto-ngrok/assets/65843843/2bd9fd4d-348d-453a-8f8e-06cd6eb76946
+
+
+https://github.com/Oct4Pie/MtProto-ngrok/assets/65843843/e2a82c00-155d-441a-8a77-28483b0f5c2d
+
 <img  src="https://i.imgur.com/EAH4lpc.jpeg"  width="400"  height="800">
 
 
