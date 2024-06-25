@@ -32,9 +32,11 @@ def stay_alive():
 
 def get_ngrok():
 
-    os.system(
-        "killall ngrok > /dev/null 2>&1"
-    ) if uname.system != "Windows" else os.system("taskkill /f /im ngrok.exe 2> nul")
+    (
+        os.system("killall ngrok > /dev/null 2>&1")
+        if uname.system != "Windows"
+        else os.system("taskkill /f /im ngrok.exe 2> nul")
+    )
 
     ngrok_file = open(
         "ngrok.exe" if uname.system == "Windows" else "ngrok",
@@ -44,25 +46,34 @@ def get_ngrok():
 
     if uname.system == "Windows":
         if uname.machine == "x86_64" or uname.machine == "AMD64":
-            link = "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip"
+            link = (
+                "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip"
+            )
 
     elif uname.system == "Linux":
         if uname.machine == "aarch64" or uname.machine == "arm64":
-            link = "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.tgz"
+            link = (
+                "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.zip"
+            )
 
         if uname.machine == "x86_64":
-            link = "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
+            link = (
+                "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip"
+            )
 
         if "armv" in uname.machine:
-            link = "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip"
+            link = "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.zip"
 
     elif uname.system == "Darwin":
         if uname.machine == "x86_64":
-            link = "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip"
+            link = (
+                "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-darwin-amd64.zip"
+            )
 
         elif uname.machine == "arm64":
-            pass
-            # ios or m1
+            link = (
+                " https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-darwin-arm64.zip"
+            )
 
         else:
             sys.stderr.write("Machine not supported")
@@ -171,8 +182,11 @@ if __name__ == "__main__":
     if os.getenv("REPL_ID") or os.getenv("RUN_HTTP"):
         stay_alive()
 
-    os.system(
-        f"{sys.executable} mtprotoproxy.py > /dev/null 2>&1"
-    ) if uname.system != "Windows" else subprocess.run(
-        f"\"{python_exec}\" \"{file_dir+'/'+'mtprotoproxy.py'}\" > nul 2>&1", shell=True
+    (
+        os.system(f"{sys.executable} mtprotoproxy.py > /dev/null 2>&1")
+        if uname.system != "Windows"
+        else subprocess.run(
+            f"\"{python_exec}\" \"{file_dir+'/'+'mtprotoproxy.py'}\" > nul 2>&1",
+            shell=True,
+        )
     )
