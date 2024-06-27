@@ -85,16 +85,19 @@ https://github.com/Oct4Pie/MtProto-ngrok/assets/65843843/e2a82c00-155d-441a-8a77
 
 
 ## Running on Repl.it
+
+### Pre-configured
+You can access it here: https://replit.com/@oct4pie/MtProto-ngrok#main.py
+* Click the green "Run" button at the top of the editor page to execute your code.
+
+### Creating Your Own
 * Sign up or log in to [Replit](https://replit.com).
 * On the Replit dashboard, click the "Create" button.
 * Choose the "Python" template to set up a new Python environment.
 * Give your Repl a name and optionally provide a description.
 * You can directly import the GitHub repository by clicking "Import from GitHub" and providing the repository URL: [https://github.com/Oct4Pie/MtProto-ngrok](https://github.com/Oct4Pie/MtProto-ngrok)
-* Use the integrated code editor to write your code. Replit's editor supports syntax highlighting, auto-indentation, and other features.
 * To manage packages and dependencies, navigate to the "Packages" tab on the left sidebar and install necessary packages.
-* Add your environment variables using the Secrets management tool by clicking the "Secrets" icon on the left sidebar.
 * Click the green "Run" button at the top of the editor page to execute your code.
-* To add collaborators, use the "Invite" button and share your Repl link with others.
 * If your project involves a web application, deploy it directly from Replit using the "Share" menu.
 
 <img src="https://i.imgur.com/Uv97mK3.png" width="600"  height="200">
