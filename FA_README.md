@@ -86,7 +86,12 @@ https://github.com/Oct4Pie/MtProto-ngrok/assets/65843843/e2a82c00-155d-441a-8a77
 
 <img  src="https://i.imgur.com/EAH4lpc.jpeg"  width="400"  height="800">
 
+
 ## اجرای روی Repl.it
+### پیش تنظیم شده
+قابل دسترس: https://replit.com/@oct4pie/MtProto-ngrok#main.py 
+* برای اجرای کد خود روی دکمه سبز "Run" در بالای صفحه ویرایشگر کلیک کنید
+### ایجاد پروژه خود
 * ثبت نام یا ورود به [Replit](https://replit.com).
 * در داشبورد Replit، روی دکمه "Create" کلیک کنید.
 * الگوی "Python" را انتخاب کنید تا یک محیط جدید پایتون ایجاد شود.
